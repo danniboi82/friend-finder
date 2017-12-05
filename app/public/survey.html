@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <h2 class="text-center">Survey Questions</h2><br>
+
+        <h3 class="text-center">
+            <strong>Find your BFF by answering questions below</strong>
+        </h3><br>
+        <h4>Name</h4>
+        <input type="text" id="name" class="form" required>
+
+        <h4>Link to Photo Image </h4>
+        <input type="text" id="photo" class="form" required>
+
+        <br>
+
+        <h3>
+            Question 1
+        </h3>
+        <h4>Do you like dogs?</h4>
+
+        <select data-placeholder="" id="q1" class="chosen-select">
+            <option value=""></option>
+            <option value="1">1 (strongly agree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (strongly disagree)</option>
+        </select>
+
+        <h3>
+            Question 2
+        </h3>
+        <h4>Do you like cats?</h4>
+
+        <select data-placeholder="" id="q2" class="chosen-select">
+            <option value=""></option>
+            <option value="1">1 (strongly agree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (strongly disagree)</option>
+        </select>
+
+        <h3>
+            Question 3
+        </h3>
+        <h4>Do you like bugs?</h4>
+
+        <select data-placeholder="" id="q3" class="chosen-select">
+            <option value=""></option>
+            <option value="1">1 (strongly agree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (strongly disagree)</option>
+        </select>
+
+        <h3>
+            Question 4
+        </h3>
+        <h4>Do you like travelling?</h4>
+
+        <select data-placeholder="" id="q4" class="chosen-select">
+            <option value=""></option>
+            <option value="1">1 (strongly agree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (strongly disagree)</option>
+        </select>
+
+        <h3>
+            Question 5
+        </h3>
+        <h4>Do you like basketball?</h4>
+
+        <select data-placeholder="" id="q5" class="chosen-select">
+            <option value=""></option>
+            <option value="1">1 (strongly agree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (strongly disagree)</option>
+        </select>
+
+        <h3>
+            Question 6
+        </h3>
+        <h4>Are a good listener?</h4>
+
+        <select data-placeholder="" id="q6" class="chosen-select">
+            <option value=""></option>
+            <option value="1">1 (strongly agree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (strongly disagree)</option>
+        </select>
+
+        <h3>
+            Question 7
+        </h3>
+        <h4>Is college a crucial part of education?</h4>
+
+        <select data-placeholder="" id="q7" class="chosen-select">
+            <option value=""></option>
+            <option value="1">1 (strongly agree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (strongly disagree)</option>
+        </select>
+
+        <h3>
+           Question 8
+        </h3>
+        <h4>Do you like coding?</h4>
+
+        <select data-placeholder="" id="q8" class="chosen-select">
+            <option value=""></option>
+            <option value="1">1 (strongly agree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (strongly disagree)</option>
+        </select>
+
+        <h3>
+           Question 9
+        </h3>
+        <h4>Do you like Mexican food?</h4>
+
+        <select data-placeholder="" id="q9" class="chosen-select">
+            <option value=""></option>
+            <option value="1">1 (strongly agree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (strongly disagree)</option>
+        </select>
+
+        <h3>
+            Question 10
+        </h3>
+        <h4>Do you like ice cream?</h4>
+
+        <select data-placeholder="" id="q10" class="chosen-select">
+            <option value=""></option>
+            <option value="1">1 (strongly agree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (strongly disagree)</option>
+        </select>
+        <br>
+        <br>
+
+        <button class="btn btn-primary " id="submit">Submit</button>
+        <hr>
+
+
+    </div>
+
+    <div id="resultsModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="model-header">
+                    <button type="button" class="close" data-missed="modal">&times;</button>
+                    <h2 class="modal-title">
+                        Best Match
+                    </h2>
+                </div>
+                <div class="modal-body">
+                    <h2 id="matchName"></h2>
+                    <img src="" alt="" id="matchImg">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    <script type="text/javascript">
+
+        //Capture the form inputs
+        $("#submit").on("click", function () {
+        event.preventDefault();
+
+            // validate user input for .form
+            function validateForm() {
+                var isValid = true;
+                $(".form").each(function () {
+                    if ($(this).val() === "") {
+                        isValid = false;
+                    }
+                });
+                //validate user in put for each of the questions
+                $(".chosen-select").each(function () {
+                    if ($(this).val() === "") {
+                        isValid = false;
+                    }
+                });
+                return isValid;
+            }
+            //if form is valid store user inputs in userData
+            if (validateForm()) {
+                var userData = {
+                    name: $("#name").val().trim(),
+                    photo: $("#photo").val().trim(),
+                    scores: [
+                        $("#q1").val().trim(),
+                        $("#q2").val().trim(),
+                        $("#q3").val().trim(),
+                        $("#q4").val().trim(),
+                        $("#q5").val().trim(),
+                        $("#q6").val().trim(),
+                        $("#q7").val().trim(),
+                        $("#q8").val().trim(),
+                        $("#q9").val().trim(),
+                        $("#q10").val().trim()
+                    ]
+                };
+                //window.location.origin returs the hostname and port # (or protocol) of a URL
+                var currentURL = window.location.origin;
+
+                $.post(currentURL + "/api/friends", userData, function (data) {
+
+                    //Grab the result from AJAX post so that best match's name and photo are displayed.
+                    $("#matchName").text(data.name);
+                    $("#matchImg").attr("src", data.photo);
+
+                    //show themodal with best match
+                    //.modal('toggle') manually toggles a modal 
+                    $("#resultsModal").modal("toggle");
+                    // alert("working");
+                });
+            
+            } else {
+                alert("Please fill out all fields before submitting!!!");
+            }
+            return false;
+        });
+
+    </script>
+
+</body>
+
+</html>
