@@ -15,7 +15,7 @@ module.exports = function (app) {
     // In each of the below cases when a user visits a link
     // (ex: localhost:PORT/api/admin... they are shown a JSON of the data in the table)
     // ---------------------------------------------------------------------------
-
+    //app.get is grabbing the friend arry object 
     app.get("/api/friends", function (req, res) {
         res.json(friends);
     });
@@ -37,7 +37,7 @@ module.exports = function (app) {
             photo:"",
             friendDifference: 1000
         };
-        //save user inputs made in userData
+        //save user inputs made in userData (req.body parses the body so it can be understood by program)
         var userData = req.body;
         //save user input scores in userScores
         var userScores = userData.scores; 
